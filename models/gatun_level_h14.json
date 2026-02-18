@@ -1,0 +1,65 @@
+{
+  "algorithm": "linear_regression",
+  "rmse": 0.445471367579486,
+  "rmse_std": 0.04239653698737084,
+  "mae": 0.3466760702613114,
+  "residual_std": 0.44722731746367395,
+  "baseline_rmse": 0.535631908189324,
+  "skill_vs_persistence": 0.16832555945858618,
+  "leaderboard": [
+    {
+      "algorithm": "linear_regression",
+      "rmse": 0.445471367579486,
+      "rmse_std": 0.04239653698737084,
+      "mae": 0.3466760702613114,
+      "residual_std": 0.44722731746367395,
+      "baseline_rmse": 0.535631908189324,
+      "skill_vs_persistence": 0.16832555945858618
+    },
+    {
+      "algorithm": "ridge",
+      "rmse": 0.44731070105162096,
+      "rmse_std": 0.043515117742674185,
+      "mae": 0.3481514842972174,
+      "residual_std": 0.44915998967569676,
+      "baseline_rmse": 0.535631908189324,
+      "skill_vs_persistence": 0.16489160893395682
+    },
+    {
+      "algorithm": "gradient_boosting",
+      "rmse": 0.5362836860176644,
+      "rmse_std": 0.09416574050094303,
+      "mae": 0.4341053459419345,
+      "residual_std": 0.5433243592339208,
+      "baseline_rmse": 0.535631908189324,
+      "skill_vs_persistence": -0.0012168390612570246
+    },
+    {
+      "algorithm": "extra_trees",
+      "rmse": 0.5393971771223212,
+      "rmse_std": 0.07276147782364183,
+      "mae": 0.43933875165832026,
+      "residual_std": 0.5432250903936034,
+      "baseline_rmse": 0.535631908189324,
+      "skill_vs_persistence": -0.0070295829569329005
+    },
+    {
+      "algorithm": "xgboost",
+      "rmse": 0.5658891467438358,
+      "rmse_std": 0.08993409035902206,
+      "mae": 0.4582701333052972,
+      "residual_std": 0.5704003855410672,
+      "baseline_rmse": 0.535631908189324,
+      "skill_vs_persistence": -0.056488865005811295
+    },
+    {
+      "algorithm": "random_forest",
+      "rmse": 0.5958437654058948,
+      "rmse_std": 0.058635705824005235,
+      "mae": 0.4863685240560926,
+      "residual_std": 0.594771362107748,
+      "baseline_rmse": 0.535631908189324,
+      "skill_vs_persistence": -0.1124127526683647
+    }
+  ]
+}

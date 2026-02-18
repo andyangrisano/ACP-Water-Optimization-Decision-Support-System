@@ -1,0 +1,65 @@
+{
+  "algorithm": "linear_regression",
+  "rmse": 0.08462107193107142,
+  "rmse_std": 0.016263747463059253,
+  "mae": 0.058143311405259857,
+  "residual_std": 0.08616853551796554,
+  "baseline_rmse": 0.06579475963464074,
+  "skill_vs_persistence": -0.2861369568180425,
+  "leaderboard": [
+    {
+      "algorithm": "linear_regression",
+      "rmse": 0.08462107193107142,
+      "rmse_std": 0.016263747463059253,
+      "mae": 0.058143311405259857,
+      "residual_std": 0.08616853551796554,
+      "baseline_rmse": 0.06579475963464074,
+      "skill_vs_persistence": -0.2861369568180425
+    },
+    {
+      "algorithm": "ridge",
+      "rmse": 0.08809512972189322,
+      "rmse_std": 0.017601107419815555,
+      "mae": 0.06136142153100026,
+      "residual_std": 0.08983433830683148,
+      "baseline_rmse": 0.06579475963464074,
+      "skill_vs_persistence": -0.3389383928307781
+    },
+    {
+      "algorithm": "gradient_boosting",
+      "rmse": 0.12291081075144232,
+      "rmse_std": 0.03005501688955534,
+      "mae": 0.09130211834804144,
+      "residual_std": 0.12631182096712446,
+      "baseline_rmse": 0.06579475963464074,
+      "skill_vs_persistence": -0.8680942286888478
+    },
+    {
+      "algorithm": "random_forest",
+      "rmse": 0.1265760771622165,
+      "rmse_std": 0.027388224163913823,
+      "mae": 0.09364733026521446,
+      "residual_std": 0.12941887389161555,
+      "baseline_rmse": 0.06579475963464074,
+      "skill_vs_persistence": -0.9238018022270362
+    },
+    {
+      "algorithm": "xgboost",
+      "rmse": 0.1323415041211679,
+      "rmse_std": 0.03752673805142481,
+      "mae": 0.09926102277910562,
+      "residual_std": 0.13682673227857411,
+      "baseline_rmse": 0.06579475963464074,
+      "skill_vs_persistence": -1.0114292514489334
+    },
+    {
+      "algorithm": "extra_trees",
+      "rmse": 0.14752158394122822,
+      "rmse_std": 0.031117429801705766,
+      "mae": 0.10827091715012589,
+      "residual_std": 0.15067477849419095,
+      "baseline_rmse": 0.06579475963464074,
+      "skill_vs_persistence": -1.2421479272880962
+    }
+  ]
+}

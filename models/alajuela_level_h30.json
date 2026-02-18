@@ -1,0 +1,7 @@
+{
+  "algorithm": "xgboost",
+  "rmse": 0.30528612250595644,
+  "mae": 0.27437951451351716,
+  "baseline_rmse": 0.14542100990746806,
+  "skill_vs_persistence": -1.0993261063185518
+}
