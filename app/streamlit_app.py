@@ -27,6 +27,7 @@ from src.features.validate_features import (
 from src.io.load_data import load_all_raw_data
 from src.io.merge_data import merge_inputs
 from src.io.update_from_bulk_export import DEFAULT_BULK_URL, update_raw_files
+from src.models.predict import generate_forecasts
 from src.models.registry import model_path
 from src.ops.monte_carlo_optimize import optimize_with_monte_carlo
 
@@ -187,18 +188,29 @@ with overview_tab:
     st.markdown("**Source freshness check**")
     st.dataframe(freshness_df, use_container_width=True)
 
-    if st.button("Update data now from Panama bulk export"):
-        with st.spinner("Updating raw files from external source..."):
+    if st.button("Update + Reforecast now"):
+        with st.spinner("Updating raw files and regenerating forecasts..."):
             try:
                 result = update_raw_files(data_dir="data/raw", bulk_url=DEFAULT_BULK_URL)
+                forecast = generate_forecasts(
+                    data_dir="data/raw",
+                    model_dir="models",
+                    output_csv=default_latest_forecast_path(),
+                )
                 st.success(
                     "Data updated. "
-                    f"Latest imported date: {result['latest_date']} | Rows imported: {result['rows_imported']}"
+                    f"Latest imported date: {result['latest_date']} | "
+                    f"Rows imported: {result['rows_imported']} | "
+                    f"Forecast rows regenerated: {len(forecast)}"
                 )
                 st.cache_data.clear()
                 st.rerun()
             except Exception as exc:
-                st.error(f"Update failed: {exc}")
+                st.error(
+                    "Update failed. If this is a model artifact issue, run training once: "
+                    "`python -m src.models.train --data-dir data/raw --model-dir models`. "
+                    f"Details: {exc}"
+                )
 
     stale = freshness_df[freshness_df["status"] == "stale"]
     if not stale.empty:
